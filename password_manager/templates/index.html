@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+
+{% block title %}SecureVault - Secure Password Manager{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-container">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <i class="fas fa-shield-alt"></i>
+                Your Passwords, <span class="gradient-text">Absolutely Secure</span>
+            </h1>
+            <p class="hero-subtitle">
+                Zero-knowledge password manager with client-side encryption. 
+                Your master password never leaves your device.
+            </p>
+            <div class="hero-buttons">
+                <a href="{% url 'main:register' %}" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i> Get Started
+                </a>
+                <a href="{% url 'main:login' %}" class="btn btn-secondary">
+                    <i class="fas fa-sign-in-alt"></i> Sign In
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="security-badge">
+                <i class="fas fa-lock"></i>
+                <span>256-bit Encryption</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="features-section">
+    <div class="container">
+        <h2 class="section-title">Why Choose SecureVault?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <h3>Zero-Knowledge</h3>
+                <p>Your passwords are encrypted on your device. We never see your data in plaintext.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-key"></i>
+                </div>
+                <h3>Strong Encryption</h3>
+                <p>AES-256 encryption with PBKDF2 key derivation and 100,000+ iterations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-mobile-alt"></i>
+                </div>
+                <h3>Cross-Platform</h3>
+                <p>Access your passwords securely from any device with our responsive design.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Auto-Lock</h3>
+                <p>Automatic session timeout after 5 minutes of inactivity for enhanced security.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
